@@ -1,6 +1,7 @@
 import 'package:animation_course/pages/animated_align.dart';
 import 'package:animation_course/pages/animated_container.dart';
 import 'package:animation_course/pages/animated_opacity.dart';
+import 'package:animation_course/pages/animated_physical_model.dart';
 import 'package:animation_course/pages/animated_text_style.dart';
 import 'package:flutter/material.dart';
 
@@ -54,6 +55,16 @@ class HomePage extends StatelessWidget {
               );
             },
             child: const Text('Animated Opacity Example'),
+          ),
+          ElevatedButton(
+            onPressed: () {
+              Navigator.of(context).push(
+                MaterialPageRoute(
+                  builder: (context) => const AnimatedPhysicalModelExample(),
+                ),
+              );
+            },
+            child: const Text('Animated Physical Model Example'),
           ),
         ],
       ),
