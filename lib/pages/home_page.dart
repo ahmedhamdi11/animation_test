@@ -1,5 +1,6 @@
 import 'package:animation_course/pages/animated_align.dart';
 import 'package:animation_course/pages/animated_container.dart';
+import 'package:animation_course/pages/animated_fav_button.dart';
 import 'package:animation_course/pages/animated_opacity.dart';
 import 'package:animation_course/pages/animated_physical_model.dart';
 import 'package:animation_course/pages/animated_text_style.dart';
@@ -87,6 +88,16 @@ class HomePage extends StatelessWidget {
               );
             },
             child: const Text('Hero Animation Example'),
+          ),
+          ElevatedButton(
+            onPressed: () {
+              Navigator.of(context).push(
+                MaterialPageRoute(
+                  builder: (context) => const AnimatedFavButton(),
+                ),
+              );
+            },
+            child: const Text('Animated Fav Button'),
           ),
         ],
       ),
