@@ -3,6 +3,8 @@ import 'package:animation_course/pages/animated_container.dart';
 import 'package:animation_course/pages/animated_opacity.dart';
 import 'package:animation_course/pages/animated_physical_model.dart';
 import 'package:animation_course/pages/animated_text_style.dart';
+import 'package:animation_course/pages/hero_animation.dart';
+import 'package:animation_course/pages/tween_animation_builder.dart';
 import 'package:flutter/material.dart';
 
 class HomePage extends StatelessWidget {
@@ -65,6 +67,26 @@ class HomePage extends StatelessWidget {
               );
             },
             child: const Text('Animated Physical Model Example'),
+          ),
+          ElevatedButton(
+            onPressed: () {
+              Navigator.of(context).push(
+                MaterialPageRoute(
+                  builder: (context) => const TweenAnimationBuilderExample(),
+                ),
+              );
+            },
+            child: const Text('Tween Animation Builder Example'),
+          ),
+          ElevatedButton(
+            onPressed: () {
+              Navigator.of(context).push(
+                MaterialPageRoute(
+                  builder: (context) => const HeroAnimationExample(),
+                ),
+              );
+            },
+            child: const Text('Hero Animation Example'),
           ),
         ],
       ),
